@@ -4,55 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/reset.css" rel="stylesheet">
     <link href="/static/css/login.css" rel="stylesheet">
+    <link href="/static/css/stylehome.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
     <title>Gym | Login</title>
 </head>
 <body>
-<div class="box">
-    <div class="container">
-        <div class="top">
-            <span>______________</span>
-            <header>Login</header>
-        </div>
-        <form method="POST" action="{% url 'login' %}">
-            {% csrf_token %}
-            <div class="input-field">
-                <input type="text" class="input" placeholder="Username" id="username" name="username">
-                <i class='bx bx-user'></i>
-            </div>
-            <div class="input-field">
-                <input type="password" class="input" placeholder="Password" id="password" name="password">
-                <i class='bx bx-lock-alt'></i>
-                <i class='bx bx-show' id="togglePassword"></i>
-            </div>
-            <div class="input-field">
-                <input type="submit" class="submit" value="Login">
-            </div>
-        </form>
-        <div class="two-col">
-            <div class="one">
-                <input type="checkbox" name="" id="check">
-                <label for="check">Remember Me</label>
+
+    <header>
+        <div class="caja">
+            <h1><img  src="/static/img/logo1.png" class="logo1" href="{% url 'index1' %}"></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index1' %}">Home</a></li>
+                <li><a href="{% url 'quienessomos' %}">Quienes Somos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'registro' %}">Registrarse</a></li>
+
+
+            </ul>
+        </nav>
+        </div>  
+    </header>
+
+    <main>
+
+        <section class="login-principal">
+            <img class="fondo" src="/static/img/gymfondo.png">
+            <div class="login-box">
+                <img src="/static/img/logo2.png" class="logo2" alt="logo2">
+                <h1>login</h1>
+
+                <form class="formularioingreso" method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <label for="username">nombre de usuario</label>
+                    <input type="text" class="inputs-login" placeholder="ingrese nombre" id="username" name="username">
+                
+                    <label for="password">contraseña</label>
+                    <div class="input-field">
+                        <input type="password" class="inputs-login" placeholder="ingrese contraseña" id="password" name="password">
+                        <i class='bx bx-lock-alt'></i>
+                        <i class='bx bx-show' id="togglePassword"></i> 
+                    </div>
+                
+                    <input type="submit" value="ingresar" class="ingresar">
+                
+
+                </form>
+
+                
+
+
+                <br><br>
+                <div class="one">
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">Remember Me</label>
+    
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+                <div class="two-R">
+                    <a href="{% url 'registro' %}">Register</a>
+                </div>
+                <div class="copyright">
+                    &copy; Gym Pacyfic Life 2023
+                </div>
+
 
             </div>
-            <div class="two">
-                <label><a href="#">Forgot password?</a></label>
-            </div>
+
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div>
+            <img width="120px" height="120px" src="/static/img/logo1.png">
+            <p class="copyright">&copy Copyright Gym Pacific Life</p>
         </div>
-        <div class="two-R">
-            <a href="{% url 'registro' %}">Register</a>
+        <div class="redes-sociales">
+            <h1>siguenos en nuestras redes</h1>
+            <a title="instagram" href="http://www.instagram.com"><img  src="/static/img/instagram.png" alt="instagram" /></a>
+            <a title="facebook" href="http://www.facebook.com"><img  src="/static/img/facebook.png" alt="facebook" /></a>
+            <a title="youtube" href="http://www.youtube.com"><img src="/static/img/youtube.png" alt="youtube" /></a>
+            <!--logos extraidos de <a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Freepik - Flaticon</a>-->
         </div>
-        <div class="Policy">
-            <a href="#">Privacy Policy</a>
-            &middot;
-            <a href="#">Terms &amp; Conditions</a>
-        </div>
-        <div class="copyright">
-            &copy; Gym Pacyfic Life 2023
-        </div>
-    </div>
-</div>
+
+        
+        
+        
+      
+    </footer>
+
 <script src='/static/js/login.js'></script>
 </body>
 </html>

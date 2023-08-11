@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pacific Life Gym</title>
+    <link rel="stylesheet" href="static\css\reset.css">
+    <link rel="stylesheet" href="static\css\stylehome.css">
+    <link rel="icon" href="static\img\icono.ico">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="caja">
+            <h1><img  src="static/img/logo1.png" class="logo1" href="{% url 'index1' %}"></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index1' %}">Home</a></li>
+                <li><a href="{% url 'quienessomos' %}">Quienes Somos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'registro' %}">Registrarse</a></li>
+
+
+            </ul>
+        </nav>
+        </div>  
+    </header>
+    <img class="banner" src="static/img/banner.png">
+
+    <main>
+
+        <ul class="productos">
+            <li>
+                <h2>PLAN 1</h2>
+                <img src="static/img/png1.png" height="250px" width="250px"><!--<a href="https://www.flaticon.es/iconos-gratis/gimnasio" title="gimnasio iconos">Gimnasio iconos creados por Freepik - Flaticon</a>-->
+                <p class="producto-descripcion">Este plan te da acceso en determinados horarios</p>
+                <p class="producto-precio">$ 10.00</p>
+                
+            </li>
+            <li>
+                <h2>PLAN 2</h2>
+                <img src="static/img/png2.png" height="250px" width="250px"><!--<a href="https://www.flaticon.es/iconos-gratis/deportes-y-competicion" title="deportes y competición iconos">Deportes y competición iconos creados por JM Graphic - Flaticon</a>-->
+                <p class="producto-descripcion">Este plan te da acceso total al gimnasio a cualquiero hora</p>
+                <p class="producto-precio">$ 15.00</p>
+            </li>
+            <li>
+                <h2>PLAN 3</h2>
+                <img src="static/img/png3.png" height="250px" width="250px"><!--<a href="https://www.flaticon.es/iconos-gratis/rutina-de-ejercicio" title="rutina de ejercicio iconos">Rutina de ejercicio iconos creados por Eucalyp - Flaticon</a>-->
+                <p class="producto-descripcion">Esta plan incluye rutinas y asesoramiento personalizado</p>
+                <p class="producto-precio">$ 30.00</p>
+                </li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <div>
+            <img width="120px" height="120px" src="static/img/logo1.png">
+            <p class="copyright">&copy Copyright Gym Pacific Life</p>
+        </div>
+        <div class="redes-sociales">
+            <h1>siguenos en nuestras redes</h1>
+            <a title="instagram" href="http://www.instagram.com"><img  src="static/img/instagram.png" alt="instagram" /></a>
+            <a title="facebook" href="http://www.facebook.com"><img  src="static/img/facebook.png" alt="facebook" /></a>
+            <a title="youtube" href="http://www.youtube.com"><img src="static/img/youtube.png" alt="youtube" /></a>
+            <!--logos extraidos de <a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Freepik - Flaticon</a>-->
+        </div>
+
+        
+        
+        
+      
+    </footer>
+
+   
+    
+</body>
+</html>

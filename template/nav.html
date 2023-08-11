@@ -277,7 +277,7 @@
           aria-expanded="false"
         >
         {% if request.user.is_authenticated %}
-              <img src="/static/media/img/images_1_0EEBk6n"alt="user"class="rounded-circle"width="60"/>
+              <img src="/static/media/img/{{ request.user.foto}}"alt="user"class="rounded-circle"width="60"/>
                     {{ request.user.first_name}}
                     {{ request.user.last_name}}
               {% else %}
@@ -288,8 +288,8 @@
             class="dropdown-menu dropdown-menu-end user-dd animated"
             aria-labelledby="navbarDropdown"
           >
-            <a class="dropdown-item" href="javascript:void(0)"
-              ><i class="mdi mdi-account me-1 ms-1"></i> My Perfil</a
+            <a class="dropdown-item" href="{% url 'perfil' %}"
+              ><i class="mdi mdi-account me-1 ms-1"></i> Mi Perfil</a
             >
             <a class="dropdown-item" href="javascript:void(0)"
               ><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a
@@ -338,57 +338,123 @@
         <li class="sidebar-item">
           <a
             class="sidebar-link waves-effect waves-dark sidebar-link"
-            href="#"
+            href="{% url 'index' %}"
             aria-expanded="false"
             ><i class="mdi mdi-view-dashboard"></i
-            ><span class="hide-menu">Dashboard</span></a
+            ><span class="hide-menu">INICIO</span></a
           >
         </li>
         
         <li class="sidebar-item">
-          <a
-            class="sidebar-link waves-effect waves-dark sidebar-link"
-            href=""
-            aria-expanded="false"
-            ><i class="mdi mdi-chart-bubble"></i
-            ><span class="hide-menu">Cronograma de ambientes</span></a
-          >
+          
         </li>
        
         <li class="sidebar-item">
-          <a
+         <!-- <a
             class="sidebar-link waves-effect waves-dark sidebar-link"
             href="{% url 'indexparametro' %}"
             aria-expanded="false"
             ><i class="mdi mdi-blur-linear"></i
-            ><span class="hide-menu">Creación de proyecto</span></a
-            >
+            ><span class="hide-menu">Creación de proyecto</span></a>-->
+        
         </li>
-       
         <li class="sidebar-item">
-         
+          <a
+            class="sidebar-link has-arrow waves-effect waves-dark"
+            href="javascript:void(0)"
+            aria-expanded="false"
+            ><i class="mdi mdi-receipt"></i
+            ><span class="hide-menu">PRINCIPAL </span></a
+          >
           <ul aria-expanded="false" class="collapse first-level">
-            
             <li class="sidebar-item">
-              <a href="{% url 'indexparametro' %}" class="sidebar-link"
-                ><i class="mdi mdi-emoticon"></i
-                ><span class="hide-menu">CRUD </span></a>
+              {% if perms.principal.view_general %}   <!--PERMISOS -->
+              <a href="{% url 'general' %}" class="sidebar-link"
+              {% endif %}   
+                ><i class="mdi mdi-note-outline"></i
+                ><span class="hide-menu"> General </span></a
+              >
             </li>
             <li class="sidebar-item">
-              <a href="{% url 'principal:leercatalogo' %}" class="sidebar-link"
-                ><i class="mdi mdi-emoticon"></i
-                ><span class="hide-menu">Catalogo </span></a>
+              <a href="form-wizard.html" class="sidebar-link"
+                ><i class="mdi mdi-note-plus"></i
+                ><span class="hide-menu"> Form Wizard </span></a
+              >
             </li>
-            <li class="sidebar-item">
-             {% if perms.principal.view_cargo %}   <!--PERMISOS -->
-              <a href="{% url 'principal:leercatalogo' %}" class="sidebar-link"
-              {% endif %}    
-                ><i class="mdi mdi-emoticon"></i
-                ><span class="hide-menu"> Cronograma </span></a>
-            </li>
-           
             
           </ul>
+        </li>
+        
+        <li class="sidebar-item">
+          <a
+            class="sidebar-link has-arrow waves-effect waves-dark"
+            href="javascript:void(0)"
+            aria-expanded="false"
+            ><i class="mdi mdi-bulletin-board"></i
+            ><span class="hide-menu">PLANIFICACION </span></a
+          >
+          <ul aria-expanded="false" class="collapse first-level">
+            <li class="sidebar-item">
+              <a href="{% url 'cronograma' %}" class="sidebar-link"
+                ><i class="mdi mdi-chart-bubble"></i
+                ><span class="hide-menu"> Cronograma </span></a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="{% url 'programa' %}" class="sidebar-link"
+                ><i class="mdi mdi-emoticon-cool"></i
+                ><span class="hide-menu"> Programa</span></a
+              >
+            </li>
+            
+          </ul>
+        </li>
+        <li class="sidebar-item">
+          <a
+            class="sidebar-link has-arrow waves-effect waves-dark"
+            href="javascript:void(0)"
+            aria-expanded="false"
+            ><i class="mdi mdi-move-resize-variant"></i
+            ><span class="hide-menu">MODELO </span></a
+          >
+          <ul aria-expanded="false" class="collapse first-level">
+            <li class="sidebar-item">
+              <a href="{% url 'catalogo' %}" class="sidebar-link"
+                ><i class="mdi mdi-view-dashboard"></i
+                ><span class="hide-menu"> Catalogar </span></a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="pages-gallery.html" class="sidebar-link"
+                ><i class="mdi mdi-multiplication-box"></i
+                ><span class="hide-menu"> Gallery </span></a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="pages-calendar.html" class="sidebar-link"
+                ><i class="mdi mdi-calendar-check"></i
+                ><span class="hide-menu"> Calendar </span></a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="pages-invoice.html" class="sidebar-link"
+                ><i class="mdi mdi-bulletin-board"></i
+                ><span class="hide-menu"> Invoice </span></a
+              >
+            </li>
+            <li class="sidebar-item">
+              <a href="pages-chat.html" class="sidebar-link"
+                ><i class="mdi mdi-message-outline"></i
+                ><span class="hide-menu"> Chat Option </span></a
+              >
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="sidebar-item">
+         
+          
         </li>
       
         <li class="sidebar-item p-3">
@@ -408,6 +474,32 @@
         </li>
       </ul>
     </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- End Sidebar navigation -->
   </div>
   <!-- End Sidebar scroll-->

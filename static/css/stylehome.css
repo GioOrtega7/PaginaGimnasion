@@ -1,0 +1,359 @@
+body{
+    font-family: sans-serif;
+}
+header{
+    background-color: #c01a1a;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo1{
+    width: 150px;
+    height: 150px;  
+    border-radius: 20px;
+  
+}
+
+
+
+nav{
+    position: absolute;
+    top: 75px;
+    right: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+nav a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+
+}
+
+.banner{
+    
+
+    width: 100%;
+  
+    
+    
+    
+}
+
+
+.fondo{
+    width: 100%;
+    height: 850px;
+}
+
+
+
+.login-box, .restablece-box{
+
+        position: absolute;
+        width: 350px;
+        margin: 0 auto;
+        padding: 50px 20px; 
+        color: #000;
+       left: 40%;
+       top: 40%;
+        box-sizing: border-box;
+        border-radius: 7%;
+        backdrop-filter: blur(10px); 
+}
+
+.login-box  .logo2, .restablece-box .logo2{
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left:calc(50% - 50px);
+}
+
+
+
+
+.login-box h1, .restablece-box h1{
+    display: block;
+    padding: 0 0 20px; 
+    text-align: center;
+    font-size: 22px;
+}
+
+form label{
+
+    display: block;
+    margin:0;
+    padding:0;
+    font-weight: bold;
+}
+
+.inputs-login, .inputs-restablece{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    width: 85%;
+    margin-bottom: 20px;
+    border:none;
+    border-bottom: 1px solid rgb(34, 44, 136); 
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+
+
+
+.ingresar, .restablecer{
+    display: block;
+    width: 85%;
+    height: 40px;
+    padding: 5px 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: red ;
+    border: none;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor: pointer;
+    outline: none;
+    
+    
+}
+
+.ingresar:hover, .restablecer:hover{
+    background: rgb(99, 48, 48);
+    transform: scale(1.1); 
+}
+
+form a{
+    
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+}
+
+.login-box a:hover, .registrarse-box a:hover, .restablece-box a:hover{
+    color: rgb(255, 0, 0); 
+}
+
+footer{
+    position: relative;
+    text-align: center;
+    background: linear-gradient(#FEFEFE,#888888);
+    padding: 50px;
+}
+
+.redes-sociales{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-top: 2em;
+    margin-left: 5%;
+
+}
+
+.redes-sociales img{
+    height: 30px;
+    width: 30px;
+}
+
+.registrarse:hover{
+    background: rgb(99, 48, 48);
+    transform: scale(1.1); 
+}
+
+.registrarse-box{
+
+       
+    position: absolute;     
+    width: 350px;
+    margin: 0 auto;
+    padding: 50px 10px; 
+    color: #000;
+    top:25%; 
+    left: 40%; 
+    box-sizing: border-box;
+    border-radius: 7%;
+    backdrop-filter: blur(10px); 
+}
+
+.registrarse-box  .logo2{
+width: 100px; 
+height: 100px; 
+border-radius: 50%;
+position: absolute;
+top: -50px;
+left:calc(50% - 50px);
+}
+
+
+
+
+.registrarse-box h1{
+display: block;
+padding: 0 0 20px; 
+text-align: center;
+font-size: 22px;
+}
+
+
+
+
+.inputs-registro{
+    display: block ;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    width: 85%;
+    margin-bottom: 20px;
+    border:none;
+    border-bottom: 1px solid rgb(34, 44, 136); 
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.registrarse{
+
+    display: block;
+    width: 85%;
+    height: 40px;
+    padding: 5px 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: red ;
+    border: none;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.contacto-form{
+    margin: 40px 0;
+}
+
+.contacto-form label, .contacto-form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 30%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange ;
+    border: none;
+    border-radius: 10px;
+    transition: 2s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: red;
+    transform: scale(1.1);
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+    
+
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px; 
+    box-sizing: border-box;
+    border: 2px solid #000000; 
+    border-radius: 10px;}
+
+
+.productos li:hover{
+    border-color: #c78c19;
+   
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.image-container {
+    white-space: nowrap; /* Evita que las imágenes se desplacen a la siguiente línea */
+  }
+  
+  .image-container img {
+    display: inline-block; /* Muestra las imágenes en línea */
+    vertical-align: middle; /* Alinea verticalmente las imágenes */
+    width: 50%; /* Ajusta el ancho de las imágenes según tus necesidades */
+  }
+  

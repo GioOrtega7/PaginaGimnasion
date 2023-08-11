@@ -1,0 +1,154 @@
+<div class="row">
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-cyan text-center">
+          <h1 class="font-light text-white">
+            {% if perms.principal1.view_cargo %}   <!-- Column permisos -->
+            <i class="mdi mdi-view-dashboard"></i>    
+            <a href="{% url 'principal1:leercargo' %}">
+            {% endif %}
+              </h1>          
+              <h6 class="text-white">Cargo</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-cyan text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_estado %}             <!-- Column permisos -->
+            <i class="mdi mdi-mdi mdi-chart-bar"></i>
+            <a href="{% url 'principal1:leerestado' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Estado</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-info text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_genero %}             <!-- Column permisos -->
+            <i class="mdi mdi-view-dashboard"></i>
+            <a href="{% url 'principal1:leergenero' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Genero</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column  -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-warning  text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_ocupacion %}     Column permisos -->
+            <i class="mdi mdi-collage"></i>
+            <a href="{% url 'principal1:leerocupacion' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Ocupacion</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column  -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-cyan  text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_persona %}     Column permisos -->
+            <i class="mdi mdi-face"></i>
+            <a href="{% url 'principal1:leerpersona' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Persona</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column   -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-success  text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_tipodocumento %}     Column permisos -->
+            <i class="mdi mdi-note-plus"></i>
+            <a href="{% url 'principal1:leertipodocumento' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Tipo Documento</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column  -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-info  text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_tipopersona %}     Column permisos -->
+            <i class="mdi mdi-emoticon"></i>
+            <a href="{% url 'principal1:leertipopersona' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Tipo Persona</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column   -->
+
+     <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-danger  text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal1.view_usuario %}     Column permisos -->
+            <i class="mdi mdi-account-multiple"></i>
+            <a href="{% url 'principal1:leerusuario' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Usuario</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column   -->
+     
+
+
+
+
+
+
+
+
+
+    
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover">
+        <div class="box bg-warning text-center">
+          <h1 class="font-light text-white">
+            <i class="mdi mdi-alert"></i>
+          </h1>
+          <h6 class="text-white">Errors</h6>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+  </div>

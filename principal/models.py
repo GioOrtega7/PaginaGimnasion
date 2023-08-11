@@ -49,6 +49,7 @@ class AuthUser(models.Model):
     is_staff = models.IntegerField()
     is_active = models.IntegerField()
     date_joined = models.DateTimeField()
+    foto = models.ImageField(upload_to = "img/")
 
     class Meta:
         managed = False
@@ -169,12 +170,13 @@ class DjangoSession(models.Model):
 class Ejercicio(models.Model):
     idejercicio = models.IntegerField(primary_key=True, db_comment='sirve para identificar la tabla de los ejercicios ')
     nombre = models.CharField(max_length=45, blank=True, null=True, db_comment='sirve para guardar el nombre de los ejercicios ')
-    imagen = models.CharField(max_length=45, blank=True, null=True, db_comment='sirve para guardar las imagenes de los ejercicios ')
-
+    imagen = models.ImageField(upload_to = "img/")
+    enfoque_idenfoque= models.ForeignKey('Enfoque', models.DO_NOTHING, db_column='enfoque_idenfoque', db_comment='sirve para identificar la tabla de enfoques ')
+    
     class Meta:
         managed = False
         db_table = 'ejercicio'
-        db_table_comment = 'sirve para guardar los ejercisios '
+        db_table_comment = 'sirve para guardar los ejercicios '
 
 
 class Enfoque(models.Model):
@@ -461,6 +463,7 @@ class Tipoplan(models.Model):
     idtipoplan = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=45, blank=True, null=True, db_comment='sirve para guardar el nombre de los planes')
     precio = models.CharField(max_length=45, blank=True, null=True, db_comment='sirve para guardar el precio de los planes ')
+    foto = models.ImageField(upload_to = "img/")
 
     class Meta:
         managed = False

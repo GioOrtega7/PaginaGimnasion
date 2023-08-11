@@ -1,0 +1,155 @@
+<div class="row">
+
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-success text-center">
+          <h1 class="font-light text-white">
+           {% if perms.principal2.view_cita %}      <!-- Column permisos -->
+            <i class="mdi mdi-pencil"></i>
+            <a href="{% url 'principal2:leercita' %}">
+            {% endif %}
+              </h1>          
+              <h6 class="text-white">Cita</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-info text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal2.view_dia %}             <!-- Column permisos -->
+            <i class="mdi mdi-calendar-check"></i>
+            <a href="{% url 'principal2:leerdia' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Dia</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-warning text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal2.view_enfoque %}             <!-- Column permisos -->
+            <i class="mdi mdi-arrow-all"></i>
+            <a href="{% url 'principal2:leerenfoque' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Enfoque</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-success text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal2.view_evolucion %}             <!-- Column permisos -->
+            <i class="mdi mdi-calendar-check"></i>
+            <a href="{% url 'principal2:leerevolucion' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Evolucion</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-warning text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal2.view_historia %}             <!-- Column permisos -->
+            <i class="mdi mdi-chart-areaspline"></i>
+            <a href="{% url 'principal2:leerhistoria' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white">Historia</h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column  -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover" >
+        <div class="box bg-success text-center">
+          <h1 class="font-light text-white">
+         <!--  {% if perms.principal2.view_horario %}             <!-- Column permisos -->
+            <i class="mdi mdi-calendar-check"></i>
+            <a href="{% url 'principal2:leerhorario' %}">
+            <!-- {% endif %}-->
+              </h1>          
+              <h6 class="text-white"> Horario </h6>
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column   -->
+    <!-- Column -->
+    
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover">
+        <div class="box bg-warning text-center">
+          <h1 class="font-light text-white">
+                                                                 <!-- Column permisos -->
+            <i class="mdi mdi-collage"></i>
+            <a href="{% url 'principal2:leerplan' %}">
+            
+          </h1>
+          <h6 class="text-white">Plan</h6>
+        </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover">
+        <div class="box bg-danger text-center">
+          <h1 class="font-light text-white">
+            <i class="mdi mdi-border-outside"></i>
+            <a href=" {% url 'principal2:leertipoplan' %}">
+          </h1>
+          <h6 class="text-white">Tipo Plan</h6>
+        </a>
+        </div>
+      </div>
+    </div>
+    
+   <!-- Column -->
+
+
+
+     
+    
+     
+
+
+
+
+
+
+
+
+
+    
+    <!-- Column -->
+    <div class="col-md-6 col-lg-2 col-xlg-3">
+      <div class="card card-hover">
+        <div class="box bg-warning text-center">
+          <h1 class="font-light text-white">
+            <i class="mdi mdi-alert"></i>
+          </h1>
+          <h6 class="text-white">Errors</h6>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+  </div>

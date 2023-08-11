@@ -1,12 +1,64 @@
-{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Registro{% endblock %}</title>
+    <!-- CSS -->
+    {% block head %}
+        <link href="/static/css/reset.css" rel="stylesheet">
+        <link href="/static/css/stylehome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    {% endblock %}
+</head>
 
-{% block title %}Registrate{% endblock %}
-<!-- CSS -->
-    <link rel="stylesheet" href="/static/css/base.css">
-{% block content %}
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" name="submit">
-    </form>    
-{% endblock content %}
+<body>
+
+    <header>
+        <div class="caja">
+            <h1><img  src="/static/img/logo1.png" class="logo1" href="{% url 'index1' %}"></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index1' %}">Home</a></li>
+                <li><a href="{% url 'quienessomos' %}">Quienes Somos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'registro' %}">Registrarse</a></li>
+
+
+            </ul>
+        </nav>
+        </div>  
+    </header>
+
+    <main>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="submit">
+        </form>    
+
+    </main>
+
+    <footer>
+        <div>
+            <img width="120px" height="120px" src="/static/img/logo1.png">
+            <p class="copyright">&copy Copyright Gym Pacific Life</p>
+        </div>
+        <div class="redes-sociales">
+            <h1>siguenos en nuestras redes</h1>
+            <a title="instagram" href="http://www.instagram.com"><img  src="/static/img/instagram.png" alt="instagram" /></a>
+            <a title="facebook" href="http://www.facebook.com"><img  src="/static/img/facebook.png" alt="facebook" /></a>
+            <a title="youtube" href="http://www.youtube.com"><img src="/static/img/youtube.png" alt="youtube" /></a>
+            <!--logos extraidos de <a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Freepik - Flaticon</a>-->
+        </div>
+
+        
+        
+        
+      
+    </footer>
+    
+
+
+
+</body>
+</html>
